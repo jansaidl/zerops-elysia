@@ -11,6 +11,7 @@ zerops:
           echo $PATH
           whereis bun || true
           ls -la /root/.bun/bin || true
+          echo HOME JE $HOME
           bun install --production
       deploy:
         - ./
