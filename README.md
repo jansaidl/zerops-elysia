@@ -2,15 +2,14 @@
 
 ```yaml
 project:
-  - name: zerops-bun
+  name: zerops-bun
 services:
   - hostname: elysia
     type: ubuntu@22.04
-    minContainers: 1
     ports:
-      port: 3000
-      httpSupport: true
+      - port: 3000
+        httpSupport: true
     enableSubdomainAccess: true
     buildFromGit: https://github.com/fxck/zerops-elysia
-
+    minContainers: 1
 ```
