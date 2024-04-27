@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+cat .bashrc
+
 echo "HOME: $HOME"
 
 echo "PATH=$PATH"
