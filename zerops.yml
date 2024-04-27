@@ -1,0 +1,12 @@
+zerops:
+  - setup: elysia
+    build:
+      prepareCommands:
+        - curl -fsSL https://bun.sh/install | bash
+        - exec /bin/zsh
+      buildCommands:
+        - bun install --production
+      deploy:
+        - ./
+    run:
+      start: NODE_ENV=production bun src/index.ts
