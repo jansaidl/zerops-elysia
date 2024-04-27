@@ -4,7 +4,7 @@ zerops:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
       buildCommands:
-        - /root/.bun/bin/bun install --production
+        - ./build.sh
       deploy:
         - ./
     run:
