@@ -8,7 +8,7 @@ export HOME=/root
 
 source /root/.bashrc
 
-echo $PATH
+PATH=/root/.bun/bin:$PATH
 
 whereis bun
 
