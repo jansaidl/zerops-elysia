@@ -4,27 +4,10 @@ zerops:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
       buildCommands:
-        - /root/.bun/bin/bun install
-        - ls -la
-        - /root/.bun/bin/bun run build
+        - /root/.bun/bin/bun install --production
       deploy:
         - ./
     run:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
-      start: NODE_ENV=production /root/.bun/bin/bun start
-  - setup: svelte
-    build:
-      prepareCommands:
-        - curl -fsSL https://bun.sh/install | bash
-      buildCommands:
-        - /root/.bun/bin/bun install
-        - ls -la
-        - /root/.bun/bin/bun run build
-      deploy:
-        - ./build
-        - package.json
-    run:
-      prepareCommands:
-        - curl -fsSL https://bun.sh/install | bash
-      start: NODE_ENV=production /root/.bun/bin/bun start
+      start: NODE_ENV=production /root/.bun/bin/bun src/index.ts
