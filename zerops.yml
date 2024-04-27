@@ -4,9 +4,16 @@ zerops:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
       buildCommands:
-        - pwd
-        - chmod +x build.sh
-        - ./build.sh
+        - |
+          echo "HOME: $HOME"
+          export HOME=/root
+          source /root/.bashrc
+          PATH=/root/.bun/bin:$PATH
+          whereis bun
+          bun install --production
+        # - pwd
+        # - chmod +x build.sh
+        # - ./build.sh
       deploy:
         - ./
     run:
