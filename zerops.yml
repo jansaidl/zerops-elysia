@@ -5,10 +5,9 @@ zerops:
         - curl -fsSL https://bun.sh/install | bash
       buildCommands:
         - |
-          echo "HOME: $HOME"
           export HOME=/root
           source /root/.bashrc
-          PATH=/root/.bun/bin:$PATH
+          # PATH=/root/.bun/bin:$PATH
           whereis bun
           bun install --production
         # - pwd
