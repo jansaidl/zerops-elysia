@@ -7,6 +7,6 @@ cat ~/.bashrc
 
 echo "PATH=$PATH"
 
-export BASH_ENV=~/.bashrc
+export BASH_ENV=/root/.bashrc
 
 ./build2.sh
