@@ -7,6 +7,8 @@ cat ~/.bashrc
 
 echo "PATH=$PATH"
 
+echo "BUN_INSTALL=$BUN_INSTALL"
+
 export BASH_ENV=/root/.bashrc
 
-./build2.sh
+bash -c ./build2.sh
