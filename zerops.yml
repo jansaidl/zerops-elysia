@@ -4,11 +4,11 @@ zerops:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
       buildCommands:
-        - echo HOME: $HOME
-        - echo PATH=$PATH
-        - echo BUN_INSTALL=$BUN_INSTALL
-        - whereis bun
-        - bun install --production
+        - "echo HOME: $HOME"
+        - "echo PATH=$PATH"
+        - "echo BUN_INSTALL=$BUN_INSTALL"
+        - "whereis bun"
+        - "bun install --production"
       deploy:
         - ./
     run:
