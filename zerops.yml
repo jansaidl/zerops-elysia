@@ -6,8 +6,11 @@ zerops:
         - |
           echo 'export PATH="/root/.bun/bin:$PATH"' >> ~/.bashrc
           source ~/.bashrc
+          sleep 60
       buildCommands:
-        - bun install --production
+        - |
+          sleep 60
+          bun install --production          
       deploy:
         - ./
     run:
