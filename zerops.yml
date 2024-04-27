@@ -3,17 +3,9 @@ zerops:
     build:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
-        - |
-          echo "-1 --"
-          echo $PATH
-          echo "-2 --"
-          cat ~/.bashrc
-          echo "-2 ----- source"
-          source ~/.bashrc
-          echo "-3 -- echo"
-          echo $PATH
       buildCommands:
         - |
+          source /root/.bashrc
           echo "-4 --"
           echo $PATH
           whereis bun || true
