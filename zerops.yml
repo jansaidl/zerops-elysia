@@ -6,7 +6,7 @@ zerops:
         - |
           echo "-0 --"
           echo $PATH
-          echo 'export PATH=/root/.bun/bin:\$PATH' >> ~/.bashrc
+          echo 'export PATH=/root/.bun/bin:\\$PATH' >> ~/.bashrc
           echo "-1 --"
           echo $PATH
           echo "-2 --"
