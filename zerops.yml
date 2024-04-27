@@ -10,8 +10,10 @@ zerops:
           echo "-1 --"
           echo $PATH
           echo "-2 --"
+          cat ~/.bashrc
+          echo "-2 ----- source"
           source ~/.bashrc
-          echo "-3 --"
+          echo "-3 -- echo"
           echo $PATH
       buildCommands:
         - |
