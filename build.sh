@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+
+echo "HOME: $HOME"
+
+export HOME=/root
+
 source /root/.bashrc
 
 echo $PATH
