@@ -6,7 +6,6 @@ zerops:
       buildCommands:
         - /root/.bun/bin/bun install
         - ls -la
-        - cat /build/source/vite.config.ts
         - /root/.bun/bin/bun run build
       deploy:
         - ./
@@ -21,7 +20,6 @@ zerops:
       buildCommands:
         - /root/.bun/bin/bun install
         - ls -la
-        - cat /build/source/vite.config.ts
         - /root/.bun/bin/bun run build
       deploy:
         - ./build
