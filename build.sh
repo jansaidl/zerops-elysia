@@ -3,12 +3,8 @@
 
 echo "HOME: $HOME"
 
-cat ~/.bashrc
-
 echo "PATH=$PATH"
 
 echo "BUN_INSTALL=$BUN_INSTALL"
 
-export BASH_ENV=/root/.bashrc
-
-bash -c ./build2.sh
+BASH_ENV=/root/.bashrc && bash ./build2.sh
