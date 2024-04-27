@@ -4,6 +4,8 @@ zerops:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
       buildCommands:
+        - "cat /root/.env"
+        - "echo '----------------'"
         - "env"
         - "echo PS1: $PS1"
         - "echo HOME: $HOME"
@@ -17,3 +19,19 @@ zerops:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
       start: NODE_ENV=production bun src/index.ts
+  - setup: svelte
+    build:
+      prepareCommands:
+        - curl -fsSL https://bun.sh/install | bash
+      buildCommands:
+        - /root/.bun/bin/bun install
+        - ls -la
+        - cat /build/source/vite.config.ts
+        - /root/.bun/bin/bun run build
+      deploy:
+        - ./build
+        - package.json
+    run:
+      prepareCommands:
+        - curl -fsSL https://bun.sh/install | bash
+      start: NODE_ENV=production /root/.bun/bin/bun start
