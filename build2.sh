@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 
 echo "BUN_INSTALL=$BUN_INSTALL"
 
