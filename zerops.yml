@@ -4,8 +4,6 @@ zerops:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
       buildCommands:
-        - "cat /root/.env"
-        - "echo '----------------'"
         - "env"
         - "echo PS1: $PS1"
         - "echo HOME: $HOME"
