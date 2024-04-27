@@ -9,4 +9,7 @@ zerops:
       deploy:
         - ./
     run:
+      prepareCommands:
+        - curl -fsSL https://bun.sh/install | bash
+        - exec /bin/zsh
       start: NODE_ENV=production bun src/index.ts
