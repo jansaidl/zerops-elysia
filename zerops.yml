@@ -4,13 +4,22 @@ zerops:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
         - |
-          echo 'export PATH="/root/.bun/bin:$PATH"' >> ~/.bashrc
+          echo "-0 --"
+          echo $PATH
+          echo 'export PATH=/root/.bun/bin:\$PATH' >> ~/.bashrc
+          echo "-1 --"
+          echo $PATH
+          echo "-2 --"
           source ~/.bashrc
-          sleep 60
+          echo "-3 --"
+          echo $PATH
       buildCommands:
         - |
-          sleep 60
-          bun install --production          
+          echo "-4 --"
+          echo $PATH
+          whereis bun || true
+          ls -la /root/.bun/bin || true
+          bun install --production
       deploy:
         - ./
     run:
