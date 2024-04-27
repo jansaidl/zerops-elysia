@@ -5,7 +5,7 @@ zerops:
         - curl -fsSL https://bun.sh/install | bash
       buildCommands:
         - |
-          chmod +x build.sg
+          chmod +x build.sh
           ./build.sh
       deploy:
         - ./
