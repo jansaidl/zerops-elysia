@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cat .bashrc
+cat ~/.bashrc
 
 echo "HOME: $HOME"
 
